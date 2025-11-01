@@ -1,0 +1,178 @@
+/* Google Fonts - Zamonaviy shriftni ulash */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS o'zgaruvchilari - Loyiha bo'ylab izchillik uchun */
+:root {
+    --bs-font-sans-serif: 'Inter', sans-serif;
+    --bs-primary: #4f46e5;
+    --bs-secondary: #64748b;
+    --bs-light: #f8fafc;
+    --bs-body-bg: #f1f5f9;
+    --bs-border-radius: 0.5rem;
+    --bs-border-radius-lg: 0.75rem;
+    --bs-card-border-width: 0;
+    --bs-card-box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --bs-card-cap-bg: #ffffff;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-body-bg);
+    color: #334155;
+}
+
+/* Header */
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.dropdown-menu {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Kartalar (Cards) - Asosiy kontent bloklari */
+.card {
+    transition: all 0.3s ease;
+    border-width: var(--bs-card-border-width);
+    box-shadow: var(--bs-card-box-shadow);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-header {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: var(--bs-card-cap-bg);
+}
+
+/* Tugmalar (Buttons) */
+.btn {
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    padding: 0.5rem 1rem;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+/* Jadvallar (Tables) */
+.table {
+    border-color: #e2e8f0;
+}
+.table thead {
+    background-color: var(--bs-light);
+    color: var(--bs-secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+/* Xabarlar (Alerts) */
+.alert {
+    border-left-width: 4px;
+    border-radius: var(--bs-border-radius);
+}
+.alert-success { border-left-color: var(--bs-success); }
+.alert-danger { border-left-color: var(--bs-danger); }
+.alert-warning { border-left-color: var(--bs-warning); }
+.alert-info { border-left-color: var(--bs-info); }
+
+/* Forma elementlari */
+.form-control, .form-select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.25);
+}
+
+.validation-error {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+}
+
+/* Sahifa sarlavhasi */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.page-header .page-title {
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* =============================================== */
+/* ======== Profil Menyusi uchun Yangi Stil ======== */
+/* =============================================== */
+
+/* Menyuning animatsiyasi va umumiy ko'rinishi */
+.navbar .dropdown-menu {
+    /* Animatsiya uchun boshlang'ich holat (ko'rinmas) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    display: block; /* Animatsiya ishlashi uchun Bootstrap'ning 'display: none' qoidasini o'zgartiramiz */
+    
+    /* Animatsiyaning o'zini belgilaymiz (ochilish tezligi va uslubi) */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0.2s;
+    
+    /* Tizim rangiga moslashtirilgan ranglar */
+    background-color: #1e293b; /* Qora rangga yaqin to'q ko'k-kulrang */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Menyu ochilgandagi holati (ko'rinadigan) */
+.navbar .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Menyudagi linklarning rangi */
+.navbar .dropdown-menu .dropdown-item {
+    color: #cbd5e1; /* Oqish-kulrang */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Sichqoncha link ustiga borgandagi rangi */
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background-color: var(--bs-primary); /* Tizimning asosiy ko'k rangi */
+    color: #ffffff; /* Oq rang */
+}
+
+/* Menyudagi sarlavha va ajratuvchi chiziq rangi */
+.navbar .dropdown-menu .dropdown-header {
+    color: #94a3b8; /* Och kulrang */
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =============================================== */
+/* ======== Admin/Targets Sahifasi Uchun Qo'shimcha Stillar ======== */
+/* =============================================== */

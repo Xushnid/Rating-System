@@ -1,0 +1,85 @@
+/ (Loyihaning asosiy papkasi)
+|
+|-- .env
+|-- .gitignore
+|-- .htaccess
+|-- composer.json
+|-- composer.lock
+|-- index.php             # YANGI: Markaziy marshrutizator (router)
+|-- bootstrap.php
+|
+|-- assets/
+|   |-- css/
+|   |   `-- style.css
+|   `-- js/
+|       |-- script.js
+|       `-- ishlanma-manager.js
+|
+|-- config/
+|   |-- database.php
+|   `-- sections.php        # O'ZGARTIRILGAN: Har bir bo'limga 'score_calculation' qoidasi qo'shildi
+|
+|-- inc/
+|   `-- functions.php
+|
+|-- logs/
+|   `-- error.log
+|
+|-- src/
+|   |
+|   |-- Controller/
+|   |   |-- AdminController.php         # YANADA KUCHAYTIRILGAN: Davrlar va rejalar boshqaruvi qo'shildi
+|   |   |-- AuthController.php          # O'ZGARTIRILGAN: Barcha rollar uchun to'g'ri yo'naltirish (redirect)
+|   |   |-- DashboardController.php     # YANADA KUCHAYTIRILGAN: O'qituvchi va Kafedra Admini uchun hisobotlar paneli
+|   |   |-- FacultyAdminController.php  # YANADA KUCHAYTIRILGAN: Fakultet Admini uchun hisobotlar paneli
+|   |   `-- DepartmentAdminController.php # YANADA KUCHAYTIRILGAN: Rejalarni taqsimlash paneli
+|   |
+|   |-- Auth.php
+|   |-- Database.php
+|   |-- Department.php
+|   |-- Faculty.php
+|   |-- Ishlanma.php          # O'ZGARTIRILGAN: Qiymat hisoblash va davr bo'yicha filtrlash metodlari
+|   |-- Period.php            # YANGI: Davrlarni (Periods) boshqarish uchun model
+|   |-- Target.php            # YANGI: Rejalarni (Targets) boshqarish va progressni hisoblash uchun model
+|   `-- User.php
+|
+|-- uploads/
+|
+|-- vendor/
+|
+`-- views/
+    |
+    |-- admin/
+    |   |-- admin_ishlanma.php
+    |   |-- departments.php
+    |   |-- faculties.php
+    |   |-- index.php           # YANADA KUCHAYTIRILGAN: Grafiklar va yakuniy hisobot paneli qo'shildi
+    |   |-- periods.php         # YANGI: Davrlarni boshqarish sahifasi
+    |   |-- targets.php         # YANGI: Rejalarni belgilash sahifasi
+    |   |-- users.php
+    |   `-- verify.php
+    |
+    |-- auth/
+    |   `-- login.php
+    |
+    |-- department_admin/
+    |   |-- add_user.php
+    |   |-- submissions.php
+    |   |-- targets.php         # YANGI: Rejalarni o'qituvchilarga taqsimlash sahifasi
+    |   `-- verify.php
+    |
+    |-- faculty_admin/
+    |   |-- department_admins.php
+    |   |-- index.php           # YANADA KUCHAYTIRILGAN: Kafedralar bo'yicha hisobot paneli qo'shildi
+    |   `-- submissions.php
+    |
+    |-- partials/
+    |   |-- header.php          # O'ZGARTIRILGAN: Yangi sahifalarga linklar qo'shildi
+    |   |-- ishlanma_table_partial.php
+    |   |-- modal_edit_ishlanma.php
+    |   `-- modal_edit_profile.php
+    |
+    `-- user/
+        |-- add_ishlanma.php    # O'ZGARTIRILGAN: Davr tanlash imkoniyati qo'shildi
+        |-- index.php           # YANADA KUCHAYTIRILGAN: Shaxsiy va kafedra bo'yicha hisobot panellari
+        `-- ishlanmalar.php
